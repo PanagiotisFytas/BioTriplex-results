@@ -44,7 +44,7 @@ class biotriplex_ner_dataset:
     dataset: str = "biotriplex_ner_dataset"
     train_split: str = "train"
     test_split: str = "val"
-    data_path: str = "../biotriplex/data/"
+    data_path: str = "../biotriplex/data/Preprocessed BioTriplex"
     use_entity_tokens_as_targets: bool = False
     entity_special_tokens: bool = False
     upweight_minority_class: bool = False
@@ -57,7 +57,7 @@ class biotriplex_nerlong_dataset:
     dataset: str = "biotriplex_nerlong_dataset"
     train_split: str = "train"
     test_split: str = "val"
-    data_path: str = "../biotriplex/data/"
+    data_path: str = "../biotriplex/data/Preprocessed BioTriplex"
     use_entity_tokens_as_targets: bool = False
     entity_special_tokens: bool = False
     upweight_minority_class: bool = False
@@ -71,7 +71,7 @@ class biored_qa_dataset:
     dataset: str = "biored_qa_dataset"
     train_split: str = "train"
     test_split: str = "val"
-    data_path: str = "../biotriplex/data/biored/"
+    data_path: str = "../biotriplex/data/Preprocessed BioTriplexbiored/"
     use_entity_tokens_as_targets: bool = False
     entity_special_tokens: bool = False
     upweight_minority_class: bool = False
@@ -87,7 +87,7 @@ class biotriplex_qa_dataset:
     dataset: str = "biotriplex_qa_dataset"
     train_split: str = "train"
     test_split: str = "val"
-    data_path: str = "../biotriplex/data/"
+    data_path: str = "../biotriplex/data/Preprocessed BioTriplex"
     use_entity_tokens_as_targets: bool = False
     entity_special_tokens: bool = False
     upweight_minority_class: bool = False

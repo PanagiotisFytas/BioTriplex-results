@@ -47,52 +47,30 @@ These instructions will get you a copy of the project up and running on your loc
 If you want to use PyTorch nightlies instead of the stable release, go to [this guide](https://pytorch.org/get-started/locally/) to retrieve the right `--extra-index-url URL` parameter for the `pip install` commands on your platform.
 
 ### Installing
-Llama-recipes provides a pip distribution for easy install and usage in other projects. Alternatively, it can be installed from source.
-
-> [!NOTE]
-> Ensure you use the correct CUDA version (from `nvidia-smi`) when installing the PyTorch wheels. Here we are using 11.8 as `cu118`.
-> H100 GPUs work better with CUDA >12.0
-
-#### Install with pip
-```
-pip install llama-recipes
-```
-
-#### Install with optional dependencies
-Llama-recipes offers the installation of optional packages. There are three optional dependency groups.
-To run the unit tests we can install the required dependencies with:
-```
-pip install llama-recipes[tests]
-```
-For the vLLM example we need additional requirements that can be installed with:
-```
-pip install llama-recipes[vllm]
-```
-To use the sensitive topics safety checker install with:
-```
-pip install llama-recipes[auditnlg]
-```
-Some recipes require the presence of langchain. To install the packages follow the recipe description or install with:
-```
-pip install llama-recipes[langchain]
-```
-Optional dependencies can also be combined with [option1,option2].
 
 #### Install from source
 To install from source e.g. for development use these commands. We're using hatchling as our build backend which requires an up-to-date pip as well as setuptools package.
 ```
-git clone git@github.com:meta-llama/llama-recipes.git
-cd llama-recipes
 pip install -U pip setuptools
 pip install -e .
 ```
 For development and contributing to llama-recipes please install all optional dependencies:
 ```
-git clone git@github.com:meta-llama/llama-recipes.git
-cd llama-recipes
 pip install -U pip setuptools
 pip install -e .[tests,auditnlg,vllm]
 ```
+
+### BioTriplex Experiments
+
+#### BioTriplex Requirements
+
+Make sure the [datasets.py](src/llama_recipes/configs/datasets.py) file has the correct `data_paths`, pointing to [Preprocessed BioTriplex](../../data/Preprocessed%20BioTriplex)
+
+#### Running BioTriplex Experiments
+
+The `/scrips/` folder contains scripts to run the BioTriplex relation extraction experiments using Llama models. It also
+contains the hyperparameter configurations for fine-tuning and evaluation that are used in the paper.
+
 
 
 ### Getting the Llama models
