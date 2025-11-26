@@ -1,4 +1,4 @@
-# BioTriplex-results
+# BioTriplex
 
 [//]: # (Baseline Replication for BioTriplex - Biomedical Relation Extraction Dataset)
 
